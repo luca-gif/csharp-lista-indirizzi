@@ -11,8 +11,6 @@ while (!fileAddress.EndOfStream)
 
     try
     {
-       
-
         string name = addressSplit[0].Trim();
         string surname = addressSplit[1].Trim();
         string street = addressSplit[2].Trim();
@@ -23,9 +21,9 @@ while (!fileAddress.EndOfStream)
         Address address = new Address(name, surname, street, city, province, zip);
         Console.WriteLine(address.ToString());
     }
-    catch
+    catch (Exception ex)
     {
-       
+        Console.WriteLine(ex.Message);
     } 
            
 }
